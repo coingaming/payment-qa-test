@@ -21,6 +21,7 @@ This project uses Node.js and Playwright. You need to install the required depen
 ```bash
 npm install
 npx playwright install
+npm install axios
 ```
 
 ### 3. Write Your Tests
