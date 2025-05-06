@@ -66,7 +66,29 @@ Invalid Card: Any card starting with 5
 Expired Card: 4111111111111112
 PayPal Success: paypal-success
 ```
+#### Example Request (via cURL)
 
+You can test the API manually using this cURL command:
+```bash
+curl -X POST http://paytest.dev:5000/api/v1/payments \
+-H "Content-Type: application/json" \
+-d '{
+  "card_number": "4111111111111111",
+  "expiry_date": "12/25",
+  "cvv": "123",
+  "amount": 100.50,
+  "currency": "USD",
+  "payment_method": "credit_card"
+}'
+ ```    
+You should receive a response like this:
+```bash
+{
+  "message": "Payment processed successfully",
+  "status": "success",
+  "transaction_id": "txn_123456789"
+}
+ ```
 
 #### **Endpoints:**
 
