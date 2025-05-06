@@ -25,7 +25,7 @@ npm install axios
 ```
 
 ### 3. Write Your Tests
-Create and write your tests in the tests/ directory. The test file to modify is payment_gateway.spec.js. The tests will use Axios to interact with the mock payment gateway API and Playwright for any browser automation you may need.<br />
+Create and write your tests in the tests/ directory. The test file to modify is payment_gateway.spec.js. The tests will use Axios to interact with the mock payment gateway API. Alternatively, you may use Playwright’s built-in API testing capabilities.<br />
 Feel free to enhance this script with more test cases or validations as needed.
 
 ### 4. Run the Tests Locally
@@ -34,11 +34,7 @@ Once you have written your tests, you can run them locally to make sure everythi
 ```bash
 npx playwright test
 ```
-This will run the tests in headless mode by default (without opening the browser). If you want to see the browser during test execution, you can run:
 
-```bash
-npx playwright test --headed
-```
 You can also run specific tests by specifying the test file:
 
 ```bash
@@ -57,7 +53,7 @@ As your repo is not public, share with **elriianova** and **ulyssesmurja** githu
 
 # Mock Payment Gateway Documentation
 
-The mock payment gateway API is available at http://paytest.dev:5000/api/v1/payments<br />
+The mock payment gateway API is available at http://paytest.dev:5000/api/v1/payments (The gateway does not have a user interface and supports only API interactions).<br />
 
 We designed it to simulate various payment scenarios based on the card number provided. It allows testing for successful payments, declined payments, invalid cards, and other scenarios without involving real transactions.
 
